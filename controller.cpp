@@ -157,8 +157,8 @@ bool Controller::valid(Chessboard currentBoard, PlayerMove player_move)
 Controller::Chessboard Controller::move(Chessboard currentBoard, PlayerMove player_move)
 {
     currentBoard.board[player_move.endX][player_move.endY] = determine_piece(player_move.startX, player_move.startY, currentBoard);
-    return currentBoard;
     currentBoard.board[player_move.startX][player_move.startY] = 0;
+    return currentBoard;
     //if king moves then castled is true
     //if king moved two spaces then castled is true, move rook
 }
